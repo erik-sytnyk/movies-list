@@ -7,14 +7,21 @@ function importData() {
     const inputList = require('./input.json').input;
 
     let actions = [];
-    let result = [];
+    let movies = [];
+    let genres = [];
     let idCounter = 1;
     for (let input of inputList) {
         let action = axios.get(`http://www.omdbapi.com/?i=${input.id}&plot=short&r=json`)
             .then((response) => {
-                let resultItem = getResultItem(response.data, idCounter++, input.id);
+                let movieItem = getResultItem(response.data, idCounter++, input.id);
 
-                result.push(resultItem);
+                for (let genre of movieItem.genres) {
+                    if (!_.includes(genres, genre)) {
+                        genres.push(genre);
+                    }
+                }
+
+                movies.push(movieItem);
             });
 
         actions.push(action);
@@ -23,7 +30,8 @@ function importData() {
     Promise.all(actions)
         .then(() => {
             let db = {
-                movies: result
+                genres,
+                movies
             };
 
             return Promise.promisify(jsonfile.writeFile)('./importer/db.json', db);
