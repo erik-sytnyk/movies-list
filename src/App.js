@@ -12,7 +12,6 @@ class App extends Component {
         };
 
         this.loadData = this.loadData.bind(this);
-        this.renderMoviesList = this.renderMoviesList.bind(this);
     }
 
     loadData() {
@@ -59,32 +58,30 @@ class App extends Component {
         );
 
         return (
-            <table className="table">
-                <thead>
-                <tr>
-                    <th className="text-center">Title</th>
-                    <th className="text-center">Year</th>
-                    <th className="text-center">Runtime</th>
-                    <th className="text-center">Genres</th>
-                    <th className="text-center">Director</th>
-                    <th className="text-center">Actors</th>
-                    <th className="text-center">Plot</th>
-                </tr>
-                </thead>
-                <tbody>
-                {movies.map(movie =>
-                    <tr key={movie.id}>
-                        <td>{movie.title}</td>
-                        <td>{movie.year}</td>
-                        <td>{movie.runtime + ' min'}</td>
-                        <td>{movie.genres.join(', ')}</td>
-                        <td>{movie.director}</td>
-                        <th>{movie.actors}</th>
-                        <th>{movie.plot}</th>
-                    </tr>
-                )}
-                </tbody>
-            </table>
+            <div className="container">
+                {
+                    movies.map(movie => this.renderMovie(movie))
+                }
+            </div>
+        );
+    }
+
+    renderMovie(movie) {
+        return (
+            <div className="row movie-row" key={movie.id}>
+                <div className="col-sm-2">
+                    <img width={96} height={142} src={movie.posterUrl} />
+                </div>
+                <div className="col-sm-10 text-left">
+                    <a>{movie.title}</a>
+                    <br/>
+                    {movie.year} | {movie.runtime + ' min'} | {movie.genres.join(', ')}
+                    <br/>
+                    {movie.director} | {movie.actors}
+                    <br/>
+                    {movie.plot}
+                </div>
+            </div>
         );
     }
 
