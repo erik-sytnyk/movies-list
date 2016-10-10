@@ -46,7 +46,8 @@ function getResultItem(data, resultId, inputId) {
             genres: data.Genre.split(', '),
             director: data.Director,
             actors: data.Actors,
-            plot: data.Plot
+            plot: data.Plot,
+            posterUrl: data.Poster
         };
 
         return item;
