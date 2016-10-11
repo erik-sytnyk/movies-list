@@ -58,30 +58,37 @@ class App extends Component {
         );
 
         return (
-            <div className="container">
-                {
-                    movies.map(movie => this.renderMovie(movie))
-                }
-            </div>
+            <table className="container">
+                <tbody>
+                    {
+                        movies.map(movie => this.renderMovie(movie))
+                    }
+                </tbody>
+            </table>
         );
     }
 
     renderMovie(movie) {
         return (
-            <div className="row movie-row" key={movie.id}>
-                <div className="col-sm-2">
-                    <img width={96} height={142} src={movie.posterUrl} />
-                </div>
-                <div className="col-sm-10 text-left">
+            <tr className="movie-row" key={movie.id}>
+                <td className="number">{movie.id}.</td>
+
+                <td className="image">
+                    <img width={70} height={96} src={movie.posterUrl} title={movie.title} alt={movie.title} />
+                </td>
+
+                <td className="title">
                     <a>{movie.title}</a>
+                    <span> ({movie.year})</span>
                     <br/>
-                    {movie.year} | {movie.runtime + ' min'} | {movie.genres.join(', ')}
+                    <span className="plot">{movie.plot}</span>
                     <br/>
-                    {movie.director} | {movie.actors}
+                    <span>Dir: {movie.director} With: {movie.actors}</span>
                     <br/>
-                    {movie.plot}
-                </div>
-            </div>
+                    <span className="genre">{movie.genres.join(' | ')}</span>
+                    <span className="runtime">{movie.runtime + ' mins.'}</span>
+                </td>
+            </tr>
         );
     }
 

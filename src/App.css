@@ -24,5 +24,34 @@
 }
 
 .movie-row {
-  padding: 10px 0;
+  background-color: #FBFBFB;
+  vertical-align: top;
+  text-align: left;
+  border: 3px solid #FFF;
+}
+
+.movie-row td {
+  padding: 10px 12px 8px 0;
+}
+
+.movie-row .title a {
+  font-weight: bold;
+}
+
+.movie-row td.number {
+  padding: 10px 8px 10px 10px;
+}
+
+.movie-row .genre {
+  font-size: smaller;
+  display: block;
+  float: left;
+  margin: 0.2em 0.5em 0 0;
+}
+
+.movie-row .runtime {
+  display: block;
+  float: right;
+  font-size: smaller;
+  margin: 0.2em 0 0;
 }
