@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import noMovie from './media/no-movie.png';
-import './App.css';
-import toastr from 'toastr';
+import noMovie from '../media/no-movie.png';
+import '../styles/App.css';
+import moviesService from '../movieService';
+
 
 class App extends Component {
     constructor(props) {
@@ -15,19 +16,11 @@ class App extends Component {
     }
 
     loadData() {
-        fetch('/movies')
-            .then((response) => {
-                if (!response.ok) throw new Error(`Invalid HTTP response status ${response.status}`);
-
-                return response.json();
-            })
+        moviesService.getMovies()
             .then((data) => {
                 this.setState({
                     movies: data
                 })
-            })
-            .catch((err) => {
-                toastr.error(err);
             });
     }
 
@@ -88,8 +81,6 @@ class App extends Component {
             </tr>
         );
     }
-
-
 }
 
 export default App;
