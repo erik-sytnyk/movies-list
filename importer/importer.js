@@ -55,7 +55,7 @@ function getResultItem(data, resultId, inputId) {
             director: data.Director,
             actors: data.Actors,
             plot: data.Plot,
-            posterUrl: data.Poster
+            posterUrl: data.Poster !== 'N/A' ? data.Poster : ''
         };
 
         return item;

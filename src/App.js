@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+import noMovie from './media/no-movie.png';
 import './App.css';
 import toastr from 'toastr';
 
@@ -35,11 +35,6 @@ class App extends Component {
         let moviesList = this.renderMoviesList(this.state.movies);
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Welcome to React</h2>
-                </div>
-                <br/>
                 <div className="container">
                     <div className="row">
                         <button className="btn btn-primary" onClick={this.loadData}>Load data</button>
@@ -69,12 +64,14 @@ class App extends Component {
     }
 
     renderMovie(movie) {
+        let posterUrl = movie.posterUrl ? movie.posterUrl : noMovie;
+
         return (
             <tr className="movie-row" key={movie.id}>
                 <td className="number">{movie.id}.</td>
 
                 <td className="image">
-                    <img width={70} height={96} src={movie.posterUrl} title={movie.title} alt={movie.title} />
+                    <img width={70} height={96} src={posterUrl} title={movie.title} alt={movie.title} />
                 </td>
 
                 <td className="title">

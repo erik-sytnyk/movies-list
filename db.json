@@ -1,99 +1,26 @@
 {
   "genres": [
-    "Animation",
-    "Comedy",
-    "Family",
-    "Action",
     "Crime",
     "Drama",
-    "Mystery",
-    "Thriller",
     "Fantasy",
     "War",
-    "Biography",
+    "Comedy",
+    "Thriller",
+    "Animation",
     "Adventure",
+    "Biography",
+    "Action",
+    "Family",
+    "Sci-Fi",
+    "Mystery",
     "Horror",
     "Romance",
-    "History",
     "Sport",
-    "Sci-Fi"
+    "History"
   ],
   "movies": [
     {
       "id": 1,
-      "title": "Ratatouille",
-      "year": "2007",
-      "runtime": "111",
-      "genres": [
-        "Animation",
-        "Comedy",
-        "Family"
-      ],
-      "director": "Brad Bird, Jan Pinkava",
-      "actors": "Patton Oswalt, Ian Holm, Lou Romano, Brian Dennehy",
-      "plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Looper",
-      "year": "2012",
-      "runtime": "119",
-      "genres": [
-        "Action",
-        "Crime",
-        "Drama"
-      ],
-      "director": "Rian Johnson",
-      "actors": "Joseph Gordon-Levitt, Bruce Willis, Emily Blunt, Paul Dano",
-      "plot": "In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits - someone like Joe - who one day learns the mob wants to 'close the loop' by sending back Joe's future self for assassination.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTY3NTY0MjEwNV5BMl5BanBnXkFtZTcwNTE3NDA1OA@@._V1_SX300.jpg"
-    },
-    {
-      "id": 3,
-      "title": "City of God",
-      "year": "2002",
-      "runtime": "130",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "director": "Fernando Meirelles, Kátia Lund",
-      "actors": "Alexandre Rodrigues, Leandro Firmino, Phellipe Haagensen, Douglas Silva",
-      "plot": "Two boys growing up in a violent neighborhood of Rio de Janeiro take different paths: one becomes a photographer, the other a drug dealer.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4ODQ3ODkzNV5BMl5BanBnXkFtZTYwOTc4NDI3._V1_SX300.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Snatch",
-      "year": "2000",
-      "runtime": "102",
-      "genres": [
-        "Comedy",
-        "Crime"
-      ],
-      "director": "Guy Ritchie",
-      "actors": "Benicio Del Toro, Dennis Farina, Vinnie Jones, Brad Pitt",
-      "plot": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
-    },
-    {
-      "id": 5,
-      "title": "L.A. Confidential",
-      "year": "1997",
-      "runtime": "138",
-      "genres": [
-        "Crime",
-        "Drama",
-        "Mystery"
-      ],
-      "director": "Curtis Hanson",
-      "actors": "Kevin Spacey, Russell Crowe, Guy Pearce, James Cromwell",
-      "plot": "As corruption grows in 1950s LA, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BNWEwNDhhNWUtYWMzNi00ZTNhLWFiZDAtMjBjZmJhMTU0ZTY2XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
-    },
-    {
-      "id": 6,
       "title": "The Shawshank Redemption",
       "year": "1994",
       "runtime": "142",
@@ -107,35 +34,22 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"
     },
     {
-      "id": 7,
-      "title": "Memento",
-      "year": "2000",
-      "runtime": "113",
-      "genres": [
-        "Mystery",
-        "Thriller"
-      ],
-      "director": "Christopher Nolan",
-      "actors": "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior",
-      "plot": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNThiYjM3MzktMDg3Yy00ZWQ3LTk3YWEtN2M0YmNmNWEwYTE3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-    },
-    {
-      "id": 8,
-      "title": "Black Swan",
-      "year": "2010",
-      "runtime": "108",
+      "id": 2,
+      "title": "Pan's Labyrinth",
+      "year": "2006",
+      "runtime": "118",
       "genres": [
         "Drama",
-        "Thriller"
+        "Fantasy",
+        "War"
       ],
-      "director": "Darren Aronofsky",
-      "actors": "Natalie Portman, Mila Kunis, Vincent Cassel, Barbara Hershey",
-      "plot": "A committed dancer wins the lead role in a production of Tchaikovsky's \"Swan Lake\" only to find herself struggling to maintain her sanity.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_SX300.jpg"
+      "director": "Guillermo del Toro",
+      "actors": "Ivana Baquero, Sergi López, Maribel Verdú, Doug Jones",
+      "plot": "In the falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",
+      "posterUrl": ""
     },
     {
-      "id": 9,
+      "id": 3,
       "title": "Pulp Fiction",
       "year": "1994",
       "runtime": "154",
@@ -149,110 +63,7 @@
       "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SX300.jpg"
     },
     {
-      "id": 10,
-      "title": "Pan's Labyrinth",
-      "year": "2006",
-      "runtime": "118",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "War"
-      ],
-      "director": "Guillermo del Toro",
-      "actors": "Ivana Baquero, Sergi López, Maribel Verdú, Doug Jones",
-      "plot": "In the falangist Spain of 1944, the bookish young stepdaughter of a sadistic army officer escapes into an eerie but captivating fantasy world.",
-      "posterUrl": "N/A"
-    },
-    {
-      "id": 11,
-      "title": "The Pianist",
-      "year": "2002",
-      "runtime": "150",
-      "genres": [
-        "Biography",
-        "Drama",
-        "War"
-      ],
-      "director": "Roman Polanski",
-      "actors": "Adrien Brody, Emilia Fox, Michal Zebrowski, Ed Stoppard",
-      "plot": "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTc4OTkyOTA3OF5BMl5BanBnXkFtZTYwMDIxNjk5._V1_SX300.jpg"
-    },
-    {
-      "id": 12,
-      "title": "Madagascar",
-      "year": "2005",
-      "runtime": "86",
-      "genres": [
-        "Animation",
-        "Adventure",
-        "Comedy"
-      ],
-      "director": "Eric Darnell, Tom McGrath",
-      "actors": "Ben Stiller, Chris Rock, David Schwimmer, Jada Pinkett Smith",
-      "plot": "Spoiled by their upbringing with no idea what wild life is really like, four animals from New York Central Zoo escape, unwittingly assisted by four absconding penguins, and find themselves in Madagascar, among a bunch of merry lemurs",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY4NDUwMzQxMF5BMl5BanBnXkFtZTcwMDgwNjgyMQ@@._V1_SX300.jpg"
-    },
-    {
-      "id": 13,
-      "title": "Psycho",
-      "year": "1960",
-      "runtime": "109",
-      "genres": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "director": "Alfred Hitchcock",
-      "actors": "Anthony Perkins, Vera Miles, John Gavin, Janet Leigh",
-      "plot": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMDI3OWRmOTEtOWJhYi00N2JkLTgwNGItMjdkN2U0NjFiZTYwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-    },
-    {
-      "id": 14,
-      "title": "Vicky Cristina Barcelona",
-      "year": "2008",
-      "runtime": "96",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "director": "Woody Allen",
-      "actors": "Rebecca Hall, Scarlett Johansson, Christopher Evan Welch, Chris Messina",
-      "plot": "Two girlfriends on a summer holiday in Spain become enamored with the same painter, unaware that his ex-wife, with whom he has a tempestuous relationship, is about to re-enter the picture.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NDQ4MTg2MV5BMl5BanBnXkFtZTcwNDUzNjU3MQ@@._V1_SX300.jpg"
-    },
-    {
-      "id": 15,
-      "title": "Catch Me If You Can",
-      "year": "2002",
-      "runtime": "141",
-      "genres": [
-        "Biography",
-        "Crime",
-        "Drama"
-      ],
-      "director": "Steven Spielberg",
-      "actors": "Leonardo DiCaprio, Tom Hanks, Christopher Walken, Martin Sheen",
-      "plot": "The true story of Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars' worth of checks as a Pan Am pilot, doctor, and legal prosecutor.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_SX300.jpg"
-    },
-    {
-      "id": 16,
-      "title": "Lock, Stock and Two Smoking Barrels",
-      "year": "1998",
-      "runtime": "107",
-      "genres": [
-        "Comedy",
-        "Crime"
-      ],
-      "director": "Guy Ritchie",
-      "actors": "Jason Flemyng, Dexter Fletcher, Nick Moran, Jason Statham",
-      "plot": "A botched card game in London triggers four friends, thugs, weed-growers, hard gangsters, loan sharks and debt collectors to collide with each other in a series of unexpected events, all for the sake of weed, cash and two antique shotguns.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTAyN2JmZmEtNjAyMy00NzYwLThmY2MtYWQ3OGNhNjExMmM4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
-    },
-    {
-      "id": 17,
+      "id": 4,
       "title": "Forrest Gump",
       "year": "1994",
       "runtime": "142",
@@ -266,7 +77,21 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjM2MwZGMtMzg3Ny00NGRkLWE4M2EtYTBiNWMzOTY0YTI4XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
     },
     {
-      "id": 18,
+      "id": 5,
+      "title": "Black Swan",
+      "year": "2010",
+      "runtime": "108",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "director": "Darren Aronofsky",
+      "actors": "Natalie Portman, Mila Kunis, Vincent Cassel, Barbara Hershey",
+      "plot": "A committed dancer wins the lead role in a production of Tchaikovsky's \"Swan Lake\" only to find herself struggling to maintain her sanity.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 6,
       "title": "Ice Age",
       "year": "2002",
       "runtime": "81",
@@ -281,52 +106,22 @@
       "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMjEyNzI1ODA0MF5BMl5BanBnXkFtZTYwODIxODY3._V1_SX300.jpg"
     },
     {
-      "id": 19,
-      "title": "Oldboy",
-      "year": "2003",
-      "runtime": "120",
-      "genres": [
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "director": "Chan-wook Park",
-      "actors": "Min-sik Choi, Ji-tae Yu, Hye-jeong Kang, Dae-han Ji",
-      "plot": "After being kidnapped and imprisoned for 15 years, Oh Dae-Su is released, only to find that he must find his captor in 5 days.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg"
-    },
-    {
-      "id": 20,
-      "title": "Casablanca",
-      "year": "1942",
-      "runtime": "102",
-      "genres": [
-        "Drama",
-        "Romance",
-        "War"
-      ],
-      "director": "Michael Curtiz",
-      "actors": "Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains",
-      "plot": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwNDYyNTk2N15BMl5BanBnXkFtZTgwMjQ0OTMyMjE@._V1_SX300.jpg"
-    },
-    {
-      "id": 21,
-      "title": "Downfall",
-      "year": "2004",
-      "runtime": "156",
+      "id": 7,
+      "title": "Catch Me If You Can",
+      "year": "2002",
+      "runtime": "141",
       "genres": [
         "Biography",
-        "Drama",
-        "History"
+        "Crime",
+        "Drama"
       ],
-      "director": "Oliver Hirschbiegel",
-      "actors": "Bruno Ganz, Alexandra Maria Lara, Corinna Harfouch, Ulrich Matthes",
-      "plot": "Traudl Junge, the final secretary for Adolf Hitler, tells of the Nazi dictator's final days in his Berlin bunker at the end of WWII.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM1OTI1MjE2Nl5BMl5BanBnXkFtZTcwMTEwMzc4NA@@._V1_SX300.jpg"
+      "director": "Steven Spielberg",
+      "actors": "Leonardo DiCaprio, Tom Hanks, Christopher Walken, Martin Sheen",
+      "plot": "The true story of Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars' worth of checks as a Pan Am pilot, doctor, and legal prosecutor.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_SX300.jpg"
     },
     {
-      "id": 22,
+      "id": 8,
       "title": "Casino Royale",
       "year": "2006",
       "runtime": "144",
@@ -338,38 +133,10 @@
       "director": "Martin Campbell",
       "actors": "Daniel Craig, Eva Green, Mads Mikkelsen, Judi Dench",
       "plot": "Armed with a licence to kill, Secret Agent James Bond sets out on his first mission as 007 and must defeat a weapons dealer in a high stakes game of poker at Casino Royale, but things are not what they seem.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTM5MjI4NDExNF5BMl5BanBnXkFtZTcwMDM1MjMzMQ@@._V1_SX300.jpg"
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjI4NDExNF5BMl5BanBnXkFtZTcwMDM1MjMzMQ@@._V1_SX300.jpg"
     },
     {
-      "id": 23,
-      "title": "All Quiet on the Western Front",
-      "year": "1930",
-      "runtime": "136",
-      "genres": [
-        "Drama",
-        "War"
-      ],
-      "director": "Lewis Milestone",
-      "actors": "Louis Wolheim, Lew Ayres, John Wray, Arnold Lucy",
-      "plot": "A young soldier faces profound disillusionment in the soul-destroying horror of World War I.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5OTg2NDY1NF5BMl5BanBnXkFtZTcwNTQ4MTMwNw@@._V1_SX300.jpg"
-    },
-    {
-      "id": 24,
-      "title": "American History X",
-      "year": "1998",
-      "runtime": "119",
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "director": "Tony Kaye",
-      "actors": "Edward Norton, Edward Furlong, Beverly D'Angelo, Jennifer Lien",
-      "plot": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMjMzNDUwNTIyMF5BMl5BanBnXkFtZTcwNjMwNDg3OA@@._V1_SX300.jpg"
-    },
-    {
-      "id": 25,
+      "id": 9,
       "title": "Spirited Away",
       "year": "2001",
       "runtime": "125",
@@ -384,95 +151,7 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjYxMDcyMzIzNl5BMl5BanBnXkFtZTYwNDg2MDU3._V1_SX300.jpg"
     },
     {
-      "id": 26,
-      "title": "Indochine",
-      "year": "1992",
-      "runtime": "159",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "director": "Régis Wargnier",
-      "actors": "Catherine Deneuve, Vincent Perez, Linh Dan Pham, Jean Yanne",
-      "plot": "This story is set in 1930, at the time when French colonial rule in Indochina is ending. A widowed French woman who works in the rubber fields, raises a Vietnamese princess as if she was ...",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM1MTkzNzA3NF5BMl5BanBnXkFtZTYwNTI2MzU5._V1_SX300.jpg"
-    },
-    {
-      "id": 27,
-      "title": "V for Vendetta",
-      "year": "2005",
-      "runtime": "132",
-      "genres": [
-        "Action",
-        "Drama",
-        "Thriller"
-      ],
-      "director": "James McTeigue",
-      "actors": "Natalie Portman, Hugo Weaving, Stephen Rea, Stephen Fry",
-      "plot": "In a future British tyranny, a shadowy freedom fighter, known only by the alias of \"V\", plots to overthrow it with the help of a young woman.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_SX300.jpg"
-    },
-    {
-      "id": 28,
-      "title": "The Grand Budapest Hotel",
-      "year": "2014",
-      "runtime": "99",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Crime"
-      ],
-      "director": "Wes Anderson",
-      "actors": "Ralph Fiennes, F. Murray Abraham, Mathieu Amalric, Adrien Brody",
-      "plot": "The adventures of Gustave H, a legendary concierge at a famous hotel from the fictional Republic of Zubrowka between the first and second World Wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_SX300.jpg"
-    },
-    {
-      "id": 29,
-      "title": "Moneyball",
-      "year": "2011",
-      "runtime": "133",
-      "genres": [
-        "Biography",
-        "Drama",
-        "Sport"
-      ],
-      "director": "Bennett Miller",
-      "actors": "Brad Pitt, Jonah Hill, Philip Seymour Hoffman, Robin Wright",
-      "plot": "Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_SX300.jpg"
-    },
-    {
-      "id": 30,
-      "title": "The Lives of Others",
-      "year": "2006",
-      "runtime": "137",
-      "genres": [
-        "Drama",
-        "Thriller"
-      ],
-      "director": "Florian Henckel von Donnersmarck",
-      "actors": "Martina Gedeck, Ulrich Mühe, Sebastian Koch, Ulrich Tukur",
-      "plot": "In 1984 East Berlin, an agent of the secret police, conducting surveillance on a writer and his lover, finds himself becoming increasingly absorbed by their lives.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BNDUzNjYwNDYyNl5BMl5BanBnXkFtZTcwNjU3ODQ0MQ@@._V1_SX300.jpg"
-    },
-    {
-      "id": 31,
-      "title": "The Imitation Game",
-      "year": "2014",
-      "runtime": "114",
-      "genres": [
-        "Biography",
-        "Drama",
-        "Thriller"
-      ],
-      "director": "Morten Tyldum",
-      "actors": "Benedict Cumberbatch, Keira Knightley, Matthew Goode, Rory Kinnear",
-      "plot": "During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.",
-      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDkwNTEyMzkzNl5BMl5BanBnXkFtZTgwNTAwNzk3MjE@._V1_SX300.jpg"
-    },
-    {
-      "id": 32,
+      "id": 10,
       "title": "Interstellar",
       "year": "2014",
       "runtime": "169",
@@ -487,7 +166,7 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg"
     },
     {
-      "id": 33,
+      "id": 11,
       "title": "The Martian",
       "year": "2015",
       "runtime": "144",
@@ -502,7 +181,22 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg"
     },
     {
-      "id": 34,
+      "id": 12,
+      "title": "The Imitation Game",
+      "year": "2014",
+      "runtime": "114",
+      "genres": [
+        "Biography",
+        "Drama",
+        "Thriller"
+      ],
+      "director": "Morten Tyldum",
+      "actors": "Benedict Cumberbatch, Keira Knightley, Matthew Goode, Rory Kinnear",
+      "plot": "During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDkwNTEyMzkzNl5BMl5BanBnXkFtZTgwNTAwNzk3MjE@._V1_SX300.jpg"
+    },
+    {
+      "id": 13,
       "title": "Ex Machina",
       "year": "2015",
       "runtime": "108",
@@ -517,7 +211,240 @@
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg"
     },
     {
-      "id": 35,
+      "id": 14,
+      "title": "L.A. Confidential",
+      "year": "1997",
+      "runtime": "138",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "director": "Curtis Hanson",
+      "actors": "Kevin Spacey, Russell Crowe, Guy Pearce, James Cromwell",
+      "plot": "As corruption grows in 1950s LA, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWEwNDhhNWUtYWMzNi00ZTNhLWFiZDAtMjBjZmJhMTU0ZTY2XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+    },
+    {
+      "id": 15,
+      "title": "City of God",
+      "year": "2002",
+      "runtime": "130",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "director": "Fernando Meirelles, Kátia Lund",
+      "actors": "Alexandre Rodrigues, Leandro Firmino, Phellipe Haagensen, Douglas Silva",
+      "plot": "Two boys growing up in a violent neighborhood of Rio de Janeiro take different paths: one becomes a photographer, the other a drug dealer.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4ODQ3ODkzNV5BMl5BanBnXkFtZTYwOTc4NDI3._V1_SX300.jpg"
+    },
+    {
+      "id": 16,
+      "title": "The Pianist",
+      "year": "2002",
+      "runtime": "150",
+      "genres": [
+        "Biography",
+        "Drama",
+        "War"
+      ],
+      "director": "Roman Polanski",
+      "actors": "Adrien Brody, Emilia Fox, Michal Zebrowski, Ed Stoppard",
+      "plot": "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTc4OTkyOTA3OF5BMl5BanBnXkFtZTYwMDIxNjk5._V1_SX300.jpg"
+    },
+    {
+      "id": 17,
+      "title": "All Quiet on the Western Front",
+      "year": "1930",
+      "runtime": "136",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "director": "Lewis Milestone",
+      "actors": "Louis Wolheim, Lew Ayres, John Wray, Arnold Lucy",
+      "plot": "A young soldier faces profound disillusionment in the soul-destroying horror of World War I.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5OTg2NDY1NF5BMl5BanBnXkFtZTcwNTQ4MTMwNw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Oldboy",
+      "year": "2003",
+      "runtime": "120",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Chan-wook Park",
+      "actors": "Min-sik Choi, Ji-tae Yu, Hye-jeong Kang, Dae-han Ji",
+      "plot": "After being kidnapped and imprisoned for 15 years, Oh Dae-Su is released, only to find that he must find his captor in 5 days.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Looper",
+      "year": "2012",
+      "runtime": "119",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "director": "Rian Johnson",
+      "actors": "Joseph Gordon-Levitt, Bruce Willis, Emily Blunt, Paul Dano",
+      "plot": "In 2074, when the mob wants to get rid of someone, the target is sent into the past, where a hired gun awaits - someone like Joe - who one day learns the mob wants to 'close the loop' by sending back Joe's future self for assassination.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTY3NTY0MjEwNV5BMl5BanBnXkFtZTcwNTE3NDA1OA@@._V1_SX300.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Ratatouille",
+      "year": "2007",
+      "runtime": "111",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "director": "Brad Bird, Jan Pinkava",
+      "actors": "Patton Oswalt, Ian Holm, Lou Romano, Brian Dennehy",
+      "plot": "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMzODU0NTkxMF5BMl5BanBnXkFtZTcwMjQ4MzMzMw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 21,
+      "title": "Memento",
+      "year": "2000",
+      "runtime": "113",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Christopher Nolan",
+      "actors": "Guy Pearce, Carrie-Anne Moss, Joe Pantoliano, Mark Boone Junior",
+      "plot": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNThiYjM3MzktMDg3Yy00ZWQ3LTk3YWEtN2M0YmNmNWEwYTE3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "id": 22,
+      "title": "Lock, Stock and Two Smoking Barrels",
+      "year": "1998",
+      "runtime": "107",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "director": "Guy Ritchie",
+      "actors": "Jason Flemyng, Dexter Fletcher, Nick Moran, Jason Statham",
+      "plot": "A botched card game in London triggers four friends, thugs, weed-growers, hard gangsters, loan sharks and debt collectors to collide with each other in a series of unexpected events, all for the sake of weed, cash and two antique shotguns.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyN2JmZmEtNjAyMy00NzYwLThmY2MtYWQ3OGNhNjExMmM4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+    },
+    {
+      "id": 23,
+      "title": "Psycho",
+      "year": "1960",
+      "runtime": "109",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Alfred Hitchcock",
+      "actors": "Anthony Perkins, Vera Miles, John Gavin, Janet Leigh",
+      "plot": "A Phoenix secretary embezzles $40,000 from her employer's client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDI3OWRmOTEtOWJhYi00N2JkLTgwNGItMjdkN2U0NjFiZTYwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "id": 24,
+      "title": "Snatch",
+      "year": "2000",
+      "runtime": "102",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "director": "Guy Ritchie",
+      "actors": "Benicio Del Toro, Dennis Farina, Vinnie Jones, Brad Pitt",
+      "plot": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+    },
+    {
+      "id": 25,
+      "title": "Madagascar",
+      "year": "2005",
+      "runtime": "86",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+      ],
+      "director": "Eric Darnell, Tom McGrath",
+      "actors": "Ben Stiller, Chris Rock, David Schwimmer, Jada Pinkett Smith",
+      "plot": "Spoiled by their upbringing with no idea what wild life is really like, four animals from New York Central Zoo escape, unwittingly assisted by four absconding penguins, and find themselves in Madagascar, among a bunch of merry lemurs",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY4NDUwMzQxMF5BMl5BanBnXkFtZTcwMDgwNjgyMQ@@._V1_SX300.jpg"
+    },
+    {
+      "id": 26,
+      "title": "Vicky Cristina Barcelona",
+      "year": "2008",
+      "runtime": "96",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "director": "Woody Allen",
+      "actors": "Rebecca Hall, Scarlett Johansson, Christopher Evan Welch, Chris Messina",
+      "plot": "Two girlfriends on a summer holiday in Spain become enamored with the same painter, unaware that his ex-wife, with whom he has a tempestuous relationship, is about to re-enter the picture.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NDQ4MTg2MV5BMl5BanBnXkFtZTcwNDUzNjU3MQ@@._V1_SX300.jpg"
+    },
+    {
+      "id": 27,
+      "title": "Moneyball",
+      "year": "2011",
+      "runtime": "133",
+      "genres": [
+        "Biography",
+        "Drama",
+        "Sport"
+      ],
+      "director": "Bennett Miller",
+      "actors": "Brad Pitt, Jonah Hill, Philip Seymour Hoffman, Robin Wright",
+      "plot": "Oakland A's general manager Billy Beane's successful attempt to assemble a baseball team on a lean budget by employing computer-generated analysis to acquire new players.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_SX300.jpg"
+    },
+    {
+      "id": 28,
+      "title": "Downfall",
+      "year": "2004",
+      "runtime": "156",
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "director": "Oliver Hirschbiegel",
+      "actors": "Bruno Ganz, Alexandra Maria Lara, Corinna Harfouch, Ulrich Matthes",
+      "plot": "Traudl Junge, the final secretary for Adolf Hitler, tells of the Nazi dictator's final days in his Berlin bunker at the end of WWII.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM1OTI1MjE2Nl5BMl5BanBnXkFtZTcwMTEwMzc4NA@@._V1_SX300.jpg"
+    },
+    {
+      "id": 29,
+      "title": "American History X",
+      "year": "1998",
+      "runtime": "119",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "director": "Tony Kaye",
+      "actors": "Edward Norton, Edward Furlong, Beverly D'Angelo, Jennifer Lien",
+      "plot": "A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0MTM4MTQtNzY5MC00NzY3LWI1ZTgtYzcxMjkyMzU4MDZiXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg"
+    },
+    {
+      "id": 30,
       "title": "Gattaca",
       "year": "1997",
       "runtime": "106",
@@ -529,7 +456,80 @@
       "director": "Andrew Niccol",
       "actors": "Ethan Hawke, Uma Thurman, Gore Vidal, Xander Berkeley",
       "plot": "A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.",
-      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BNzQxMzU3OTQwNF5BMl5BanBnXkFtZTYwNDUyNTE5._V1_SX300.jpg"
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDQxOTc0MzMtZmRlOS00OWQ5LWI2ZDctOTAwNmMwOTYxYzlhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "id": 31,
+      "title": "Casablanca",
+      "year": "1942",
+      "runtime": "102",
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "director": "Michael Curtiz",
+      "actors": "Humphrey Bogart, Ingrid Bergman, Paul Henreid, Claude Rains",
+      "plot": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwNDYyNTk2N15BMl5BanBnXkFtZTgwMjQ0OTMyMjE@._V1_SX300.jpg"
+    },
+    {
+      "id": 32,
+      "title": "The Grand Budapest Hotel",
+      "year": "2014",
+      "runtime": "99",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ],
+      "director": "Wes Anderson",
+      "actors": "Ralph Fiennes, F. Murray Abraham, Mathieu Amalric, Adrien Brody",
+      "plot": "The adventures of Gustave H, a legendary concierge at a famous hotel from the fictional Republic of Zubrowka between the first and second World Wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_SX300.jpg"
+    },
+    {
+      "id": 33,
+      "title": "Indochine",
+      "year": "1992",
+      "runtime": "159",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "director": "Régis Wargnier",
+      "actors": "Catherine Deneuve, Vincent Perez, Linh Dan Pham, Jean Yanne",
+      "plot": "This story is set in 1930, at the time when French colonial rule in Indochina is ending. A widowed French woman who works in the rubber fields, raises a Vietnamese princess as if she was ...",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM1MTkzNzA3NF5BMl5BanBnXkFtZTYwNTI2MzU5._V1_SX300.jpg"
+    },
+    {
+      "id": 34,
+      "title": "V for Vendetta",
+      "year": "2005",
+      "runtime": "132",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "director": "James McTeigue",
+      "actors": "Natalie Portman, Hugo Weaving, Stephen Rea, Stephen Fry",
+      "plot": "In a future British tyranny, a shadowy freedom fighter, known only by the alias of \"V\", plots to overthrow it with the help of a young woman.",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_SX300.jpg"
+    },
+    {
+      "id": 35,
+      "title": "The Lives of Others",
+      "year": "2006",
+      "runtime": "137",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "director": "Florian Henckel von Donnersmarck",
+      "actors": "Martina Gedeck, Ulrich Mühe, Sebastian Koch, Ulrich Tukur",
+      "plot": "In 1984 East Berlin, an agent of the secret police, conducting surveillance on a writer and his lover, finds himself becoming increasingly absorbed by their lives.",
+      "posterUrl": "http://ia.media-imdb.com/images/M/MV5BNDUzNjYwNDYyNl5BMl5BanBnXkFtZTcwNjU3ODQ0MQ@@._V1_SX300.jpg"
     }
   ]
 }
