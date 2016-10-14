@@ -24,35 +24,71 @@
   to { transform: rotate(360deg); }
 }
 
+#movie-list {
+  padding: 20px;
+  background-color: #F8F8F8;
+}
+
 .movie-row {
-  background-color: #FBFBFB;
-  vertical-align: top;
-  text-align: left;
-  border: 3px solid #FFF;
+  font-size: 15px;
+  padding: 10px 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: 1px solid #cacaca;
+  position: relative;
+  display: table;
+  clear: both;
+  width: 100%;
 }
 
-.movie-row td {
-  padding: 10px 12px 8px 0;
-}
-
-.movie-row .title a {
-  font-weight: bold;
-}
-
-.movie-row td.number {
-  padding: 10px 8px 10px 10px;
-}
-
-.movie-row .genre {
-  font-size: smaller;
-  display: block;
+.movie-row .image {
   float: left;
-  margin: 0.2em 0.5em 0 0;
+  position: relative;
+  background-color: #eee;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
-.movie-row .runtime {
-  display: block;
+.movie-row .title {
+  font-size: 12px;
+  margin-left: 114px;
+  margin-right: 0;
+  text-align: left;
+  font-family: Verdana, Arial, sans-serif;
+  color: #333;
+}
+
+.movie-row .title p span::before {
+  content: " | ";
+  color: #ddd;
+}
+
+.movie-row .title h3 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.movie-row .title button {
   float: right;
-  font-size: smaller;
-  margin: 0.2em 0 0;
+  margin-left: 5px;
+}
+
+.movie-row .title .movie-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-row .title .actors {
+  margin-top: 8px;
+  color: #337ab7;
+}
+
+.movie-row .title .plot {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.4em;
+  max-height: 4.2em;
+  text-align: justify;
+  padding-right: 1.2em;
+  font-size: 14px;
 }

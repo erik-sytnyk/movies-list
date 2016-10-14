@@ -57,13 +57,13 @@ class App extends Component {
         );
 
         return (
-            <table className="container">
-                <tbody>
-                {
-                    movies.map(movie => this.renderMovie(movie))
-                }
-                </tbody>
-            </table>
+            <div className="container">
+                <div id="movie-list">
+                    {
+                        movies.map(movie => this.renderMovie(movie))
+                    }
+                </div>
+            </div>
         );
     }
 
@@ -71,28 +71,32 @@ class App extends Component {
         let posterUrl = movie.posterUrl ? movie.posterUrl : noMovie;
 
         return (
-            <tr className="movie-row" key={movie.id}>
-                <td className="number">{movie.id}.</td>
+            <div className="movie-row" key={movie.id}>
+                <div className="image">
+                    <img width={96} height={142} src={posterUrl} title={movie.title} alt={movie.title}/>
+                </div>
 
-                <td className="image">
-                    <img width={70} height={96} src={posterUrl} title={movie.title} alt={movie.title}/>
-                </td>
+                <div className="title">
+                    <h3>
+                        <a href="#">{movie.title}</a>
+                        <Button onClick={() => this.deleteMovie(movie.id)}><Glyphicon glyph="remove"/></Button>
+                        <Button><Glyphicon glyph="edit"/></Button>
+                    </h3>
 
-                <td className="title">
-                    <a>{movie.title}</a>
-                    <span> ({movie.year})</span>
-                    <br/>
-                    <Button><Glyphicon glyph="edit"/></Button>
-                    <Button onClick={() => this.deleteMovie(movie.id)}><Glyphicon glyph="remove"/></Button>
-                    <br/>
-                    <span className="plot">{movie.plot}</span>
-                    <br/>
-                    <span>Dir: {movie.director} With: {movie.actors}</span>
-                    <br/>
-                    <span className="genre">{movie.genres.join(' | ')}</span>
-                    <span className="runtime">{movie.runtime + ' mins.'}</span>
-                </td>
-            </tr>
+                    <p className="movie-info">
+                        {movie.year}
+                        <span>{movie.runtime + ' min.'}</span>
+                        <span>{movie.genres.join(', ')}</span>
+                    </p>
+
+                    <p className="actors">
+                        {movie.director}
+                        <span>{movie.actors}</span>
+                    </p>
+
+                    <p className="plot">{movie.plot}</p>
+                </div>
+            </div>
         );
     }
 }
