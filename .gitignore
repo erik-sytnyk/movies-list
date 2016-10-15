@@ -17,3 +17,4 @@ npm-debug.log
 importer/output.json
 importer/db.json
 db.json
+importer/data/

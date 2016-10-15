@@ -34,7 +34,7 @@ function importData() {
                 movies
             };
 
-            return Promise.promisify(jsonfile.writeFile)('./importer/db.json', db);
+            return Promise.promisify(jsonfile.writeFile)('./importer/data/db.json', db);
         })
         .then(() => {
             console.log('Imported')
