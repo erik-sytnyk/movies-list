@@ -4,7 +4,8 @@ import '../styles/App.css';
 import moviesService from '../movieService';
 import {Button, Glyphicon, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import toastr from 'toastr';
-import Confirm from './Confirm';
+import Confirm from './common/Confirm';
+import EditMovie from './EditMovie';
 import autoBind from 'react-autobind';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
             movies: [],
             total: 0,
             movieToDeleteId: null,
+            movieToEdit: null,
             activePage: 1,
             sortBy: 'title',
             searchStr: ''
@@ -82,11 +84,43 @@ class App extends Component {
             activePage: 1
         }, () => {
             this.loadData();
-        })
+        });
     }
 
     search() {
-        this.loadData();
+        this.setState({
+            activePage: 1
+        }, () => {
+            this.loadData();
+        });
+    }
+
+    saveMovie() {
+        let movie = this.state.movieToEdit;
+        
+        this.setState({movieToEdit: null}, () => {
+            moviesService.updateMovie(movie)
+                .then(() => {
+                    toastr.success('Movie was updated');
+
+                    this.loadData();
+                })
+        });
+    }
+
+    cancelEditMovie() {
+        this.setState({
+            movieToEdit: null
+        });
+    }
+
+    updateMovieState(event) {
+        let movie = this.state.movieToEdit;
+
+        const field = event.target.name;
+        movie[field] = event.target.value;
+
+        return this.setState({movieToEdit: movie});
     }
 
     render() {
@@ -108,6 +142,7 @@ class App extends Component {
         );
 
         let deleteConfirmVisible = this.state.movieToDeleteId ? true : false;
+        let editMovieVisible = this.state.movieToEdit ? true : false;
 
         return (
             <div>
@@ -116,6 +151,8 @@ class App extends Component {
                         this.state.movies.map(movie => this.renderMovie(movie))
                     }
                 </div>
+                <EditMovie visible={editMovieVisible} movie={this.state.movieToEdit} save={this.saveMovie}
+                           close={this.cancelEditMovie} onChange={this.updateMovieState}/>
                 <Confirm visible={deleteConfirmVisible} action={this.deleteMovie} close={this.cancelDeleteMovie}/>
             </div>
         );
@@ -195,8 +232,18 @@ class App extends Component {
                 <div className="title">
                     <h3>
                         <a href="#">{movie.title}</a>
-                        <Button onClick={() => this.confirmDeleteMovie(movie.id)}><Glyphicon glyph="remove"/></Button>
-                        <Button><Glyphicon glyph="edit"/></Button>
+                        <Button
+                            onClick={() =>
+                                this.confirmDeleteMovie(movie.id)
+                            }>
+                            <Glyphicon glyph="remove"/>
+                        </Button>
+                        <Button
+                            onClick={() => {
+                                this.setState({movieToEdit: Object.assign({}, movie)})
+                            }}>
+                            <Glyphicon glyph="edit"/>
+                        </Button>
                     </h3>
 
                     <p className="movie-info">

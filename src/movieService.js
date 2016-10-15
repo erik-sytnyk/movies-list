@@ -2,7 +2,8 @@ import toastr from 'toastr';
 
 export default {
     getMovies,
-    deleteMovie
+    deleteMovie,
+    updateMovie
 };
 
 function getMovies(page, sortBy, searchStr) {
@@ -26,9 +27,25 @@ function getMovies(page, sortBy, searchStr) {
 }
 
 function deleteMovie(id) {
-    return fetch(`/movies/${id}`, {
-            method: 'DELETE'
+    return fetch(`/movies/${id}`, {method: 'DELETE'})
+        .then((response) => {
+            checkStatus(response);
         })
+        .catch((err) => {
+            toastr.error(err);
+        });
+}
+
+function updateMovie(movie) {
+    let request = new Request(`/movies/${movie.id}`, {
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        method: 'PATCH',
+        body: JSON.stringify(movie)
+    });
+
+    return fetch(request)
         .then((response) => {
             checkStatus(response);
         })
