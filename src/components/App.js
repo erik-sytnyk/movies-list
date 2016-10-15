@@ -16,14 +16,24 @@ class App extends Component {
             total: 0,
             movieToDeleteId: null,
             activePage: 1,
-            sortBy: 'title'
+            sortBy: 'title',
+            searchStr: ''
         };
 
         autoBind(this);
     }
 
+    get anyMovies() {
+        let movies = this.state.movies;
+        return movies && movies.length;
+    }
+
+    componentDidMount() {
+        this.loadData();
+    }
+
     loadData() {
-        moviesService.getMovies(this.state.activePage, this.state.sortBy)
+        moviesService.getMovies(this.state.activePage, this.state.sortBy, this.state.searchStr)
             .then((data) => {
                 this.setState({
                     movies: data.dataItems,
@@ -75,35 +85,35 @@ class App extends Component {
         })
     }
 
+    search() {
+        this.loadData();
+    }
+
     render() {
-        let moviesList = this.renderMoviesList(this.state.movies);
         return (
             <div className="App">
                 <div className="container">
                     <div className="row">
-                        <button className="btn btn-primary" onClick={this.loadData}>Load data</button>
-                        <br/>
-                        <br/>
-                        {moviesList}
+                        {this.renderFilterBar()}
+                        {this.renderMoviesList()}
                     </div>
                 </div>
             </div>
         );
     }
 
-    renderMoviesList(movies) {
-        if (!movies || !movies.length) return (
-            <div>No movies loaded.</div>
+    renderMoviesList() {
+        if (!this.anyMovies) return (
+            <div style={{marginTop: 30}}>No movies.</div>
         );
 
         let deleteConfirmVisible = this.state.movieToDeleteId ? true : false;
 
         return (
-            <div className="container">
-                {this.renderFilterBar()}
+            <div>
                 <div id="movie-list">
                     {
-                        movies.map(movie => this.renderMovie(movie))
+                        this.state.movies.map(movie => this.renderMovie(movie))
                     }
                 </div>
                 <Confirm visible={deleteConfirmVisible} action={this.deleteMovie} close={this.cancelDeleteMovie}/>
@@ -120,9 +130,12 @@ class App extends Component {
             {key: 'runtime', text: 'Movie runtime'},
         ];
 
+        let itemStyle = {marginTop: 23};
+        let searchInputStyle = {height: 27, marginRight: 10};
+
         return (
             <div id="filter-bar" className="row">
-                <div className="col-sm-3" style={{marginTop: 23}}>
+                <div className="col-sm-2" style={itemStyle}>
                     <ButtonToolbar>
                         <DropdownButton bsSize="small" title="Sort By:" id="sort-by-dropdown">
                             {sortByOptions.map(item => {
@@ -134,20 +147,37 @@ class App extends Component {
                         </DropdownButton>
                     </ButtonToolbar>
                 </div>
-                <div className="col-sm-6">
-                    <Pagination
-                        bsSize="medium"
-                        first
-                        last
-                        ellipsis
-                        maxButtons={5}
-                        items={pageNumber}
-                        activePage={this.state.activePage}
-                        onSelect={this.pageSelection}
+                <div className="col-sm-4 text-left" style={itemStyle}>
+                    <input type="text"
+                           value={this.state.searchStr}
+                           style={searchInputStyle}
+                           onChange={(event) => {
+                               this.setState({
+                                   searchStr: event.target.value
+                               });
+                           }}
+                           onKeyPress={(target) => {
+                               if (target.charCode === 13) {
+                                   this.search();
+                               }
+                           }}
                     />
+                    <Button bsStyle="primary" onClick={() => this.search()}>Search</Button>
                 </div>
-                <div className="col-sm-3">
-                    {/*TODO search*/}
+                <div className="col-sm-6 text-right">
+                    {this.anyMovies ?
+                        <Pagination
+                            bsSize="medium"
+                            first
+                            last
+                            ellipsis
+                            boundaryLinks
+                            maxButtons={5}
+                            items={pageNumber}
+                            activePage={this.state.activePage}
+                            onSelect={this.pageSelection}
+                        /> : null
+                    }
                 </div>
             </div>
         );

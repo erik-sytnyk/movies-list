@@ -5,8 +5,10 @@ export default {
     deleteMovie
 };
 
-function getMovies(page, sortBy) {
-    return fetch(`/movies?_page=${page}&_sort=${sortBy}`)
+function getMovies(page, sortBy, searchStr) {
+    if (!searchStr) searchStr = '';
+
+    return fetch(`/movies?_page=${page}&_sort=${sortBy}&q=${searchStr}`)
         .then((response) => {
             checkStatus(response);
 
