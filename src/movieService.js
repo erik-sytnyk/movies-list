@@ -5,12 +5,18 @@ export default {
     deleteMovie
 };
 
-function getMovies() {
-    return fetch('/movies')
+function getMovies(page) {
+    return fetch(`/movies?_page=${page}&_sort=title`)
         .then((response) => {
             checkStatus(response);
 
-            return response.json();
+            return response.json()
+                .then((jsonData) => {
+                    return {
+                        total: response.headers.get('x-total-count'),
+                        dataItems: jsonData
+                    }
+                });
         })
         .catch((err) => {
             toastr.error(err);

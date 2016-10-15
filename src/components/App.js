@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import noMovie from '../media/no-movie.png';
 import '../styles/App.css';
 import moviesService from '../movieService';
-import {Button, Glyphicon} from 'react-bootstrap';
+import {Button, Glyphicon, Pagination} from 'react-bootstrap';
 import toastr from 'toastr';
 import Confirm from './Confirm';
 import autoBind from 'react-autobind';
@@ -13,19 +13,28 @@ class App extends Component {
 
         this.state = {
             movies: [],
-            movieToDeleteId: null
+            total: 0,
+            movieToDeleteId: null,
+            activePage: 1
         };
 
         autoBind(this);
     }
 
     loadData() {
-        moviesService.getMovies()
+        moviesService.getMovies(this.state.activePage)
             .then((data) => {
                 this.setState({
-                    movies: data
+                    movies: data.dataItems,
+                    total: data.total
                 })
             });
+    }
+
+    confirmDeleteMovie(id) {
+        this.setState({
+            movieToDeleteId: id
+        });
     }
 
     deleteMovie() {
@@ -39,6 +48,21 @@ class App extends Component {
                     movieToDeleteId: null
                 });
             });
+    }
+
+    cancelDeleteMovie() {
+        this.setState({
+            movieToDeleteId: null
+        });
+    }
+
+    pageSelection(eventKey) {
+        this.setState({
+            activePage: eventKey
+        }, () => {
+            //after setSate is completed
+            this.loadData();
+        });
     }
 
     render() {
@@ -63,9 +87,20 @@ class App extends Component {
         );
 
         let deleteConfirmVisible = this.state.movieToDeleteId ? true: false;
+        let pageNumber = Math.ceil(this.state.total / 10);
 
         return (
             <div className="container">
+                <Pagination
+                    bsSize="medium"
+                    first
+                    last
+                    ellipsis
+                    maxButtons={5}
+                    items={pageNumber}
+                    activePage={this.state.activePage}
+                    onSelect={this.pageSelection}
+                />
                 <div id="movie-list">
                     {
                         movies.map(movie => this.renderMovie(movie))
@@ -74,18 +109,6 @@ class App extends Component {
                 <Confirm visible={deleteConfirmVisible} action={this.deleteMovie} close={this.cancelDeleteMovie}/>
             </div>
         );
-    }
-
-    confirmDeleteMovie(id) {
-        this.setState({
-            movieToDeleteId: id
-        });
-    }
-
-    cancelDeleteMovie() {
-        this.setState({
-            movieToDeleteId: null
-        });
     }
 
     renderMovie(movie) {
