@@ -3,7 +3,7 @@ import toastr from 'toastr';
 export default {
     getMovies,
     deleteMovie,
-    updateMovie,
+    saveMovie,
     getGenres
 };
 
@@ -37,12 +37,36 @@ function deleteMovie(id) {
         });
 }
 
+function saveMovie(movie) {
+    if (movie.id) return updateMovie(movie);
+
+    return addMovie(movie);
+}
+
 function updateMovie(movie) {
     let request = new Request(`/movies/${movie.id}`, {
         headers: new Headers({
             'Content-Type': 'application/json'
         }),
         method: 'PATCH',
+        body: JSON.stringify(movie)
+    });
+
+    return fetch(request)
+        .then((response) => {
+            checkStatus(response);
+        })
+        .catch((err) => {
+            toastr.error(err);
+        });
+}
+
+function addMovie(movie) {
+    let request = new Request(`/movies`, {
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        method: 'POST',
         body: JSON.stringify(movie)
     });
 

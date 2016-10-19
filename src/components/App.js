@@ -103,13 +103,28 @@ class App extends Component {
         });
     }
 
+    addMovie() {
+        //add empty movie
+        this.setState({
+            movieToEdit: {
+                title: '',
+                year: 2016,
+                runtime: 120,
+                genres: [],
+                director: '',
+                actors: '',
+                plot: ''
+            }
+        });
+    }
+
     saveMovie() {
         let movie = this.state.movieToEdit;
-        
+
         this.setState({movieToEdit: null}, () => {
-            moviesService.updateMovie(movie)
+            moviesService.saveMovie(movie)
                 .then(() => {
-                    toastr.success('Movie was updated');
+                    toastr.success('Movie was saved');
 
                     this.loadData();
                 })
@@ -175,12 +190,12 @@ class App extends Component {
             {key: 'runtime', text: 'Movie runtime'},
         ];
 
-        let itemStyle = {marginTop: 23};
+        let itemStyle = {marginTop: 19};
         let searchInputStyle = {height: 27, marginRight: 10};
 
         return (
             <div id="filter-bar" className="row">
-                <div className="col-sm-2" style={itemStyle}>
+                <div className="col-sm-1" style={itemStyle}>
                     <ButtonToolbar>
                         <DropdownButton bsSize="small" title="Sort By:" id="sort-by-dropdown">
                             {sortByOptions.map(item => {
@@ -223,6 +238,11 @@ class App extends Component {
                             onSelect={this.pageSelection}
                         /> : null
                     }
+                </div>
+                <div className="col-sm-1" style={itemStyle}>
+                    <Button bsStyle="success" onClick={this.addMovie}>
+                        <Glyphicon glyph="plus"/>
+                    </Button>
                 </div>
             </div>
         );

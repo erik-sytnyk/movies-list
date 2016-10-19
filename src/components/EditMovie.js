@@ -64,7 +64,7 @@ class EditMovie extends React.Component {
                         />
                         <NumberInput
                             name="runtime"
-                            label="runtime"
+                            label="Runtime"
                             value={this.props.movie.runtime}
                             onChange={this.props.onChange}
                         />
