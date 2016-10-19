@@ -14,6 +14,7 @@ class App extends Component {
 
         this.state = {
             movies: [],
+            genres: [],
             total: 0,
             movieToDeleteId: null,
             movieToEdit: null,
@@ -31,7 +32,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.loadData();
+        moviesService.getGenres()
+            .then((genres) => {
+                this.setState({
+                    genres
+                }, () => {
+                    this.loadData();
+                });
+            });
     }
 
     loadData() {
@@ -151,8 +159,8 @@ class App extends Component {
                         this.state.movies.map(movie => this.renderMovie(movie))
                     }
                 </div>
-                <EditMovie visible={editMovieVisible} movie={this.state.movieToEdit} save={this.saveMovie}
-                           close={this.cancelEditMovie} onChange={this.updateMovieState}/>
+                <EditMovie visible={editMovieVisible} movie={this.state.movieToEdit} genres={this.state.genres}
+                           save={this.saveMovie} close={this.cancelEditMovie} onChange={this.updateMovieState}/>
                 <Confirm visible={deleteConfirmVisible} action={this.deleteMovie} close={this.cancelDeleteMovie}/>
             </div>
         );

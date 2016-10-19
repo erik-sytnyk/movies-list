@@ -3,7 +3,8 @@ import toastr from 'toastr';
 export default {
     getMovies,
     deleteMovie,
-    updateMovie
+    updateMovie,
+    getGenres
 };
 
 function getMovies(page, sortBy, searchStr) {
@@ -48,6 +49,18 @@ function updateMovie(movie) {
     return fetch(request)
         .then((response) => {
             checkStatus(response);
+        })
+        .catch((err) => {
+            toastr.error(err);
+        });
+}
+
+function getGenres() {
+    return fetch(`/genres`)
+        .then((response) => {
+            checkStatus(response);
+
+            return response.json();
         })
         .catch((err) => {
             toastr.error(err);
