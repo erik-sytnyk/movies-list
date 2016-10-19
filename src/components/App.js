@@ -118,6 +118,12 @@ class App extends Component {
         });
     }
 
+    updateMovie(movie) {
+        this.setState({
+            movieToEdit: Object.assign({}, movie)
+        });
+    }
+
     saveMovie() {
         let movie = this.state.movieToEdit;
 
@@ -259,17 +265,14 @@ class App extends Component {
 
                 <div className="title">
                     <h3>
-                        <a href="#">{movie.title}</a>
+                        <a onClick={() => this.updateMovie(movie)} style={{cursor: 'pointer'}}>{movie.title}</a>
                         <Button
                             onClick={() =>
                                 this.confirmDeleteMovie(movie.id)
                             }>
                             <Glyphicon glyph="remove"/>
                         </Button>
-                        <Button
-                            onClick={() => {
-                                this.setState({movieToEdit: Object.assign({}, movie)})
-                            }}>
+                        <Button onClick={() => this.updateMovie(movie)}>
                             <Glyphicon glyph="edit"/>
                         </Button>
                     </h3>
