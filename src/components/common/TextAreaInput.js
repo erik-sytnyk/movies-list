@@ -1,29 +1,39 @@
 import React from 'react';
+import classnames from 'classnames';
 
-const TextInput = ({name, label, onChange, placeholder, value, error, rows}) => {
-    let wrapperClass = 'form-group';
-    if (error && error.length > 0) {
-        wrapperClass += ' has-error';
-    }
+class TextInput extends React.Component {
+    render() {
+        let {error, value, name, label, placeholder, rows} = this.props;
 
-    if (!rows) rows = 3;
+        let wrapperClass = classnames({
+            'form-group': true,
+            'has-error': error && error.length > 0
+        });
 
-    return (
-        <div className={wrapperClass}>
-            <label htmlFor={name}>{label}</label>
-            <div className="field">
+        let inputOnChange = (event) => {
+            this.props.onChange(event.target.name, event.target.value);
+        };
+
+        if (!rows) rows = 3;
+
+        return (
+            <div className={wrapperClass}>
+                <label htmlFor={name}>{label}</label>
+                <div className="field">
                 <textarea
                     type="text"
                     name={name}
+                    rows={rows}
                     className="form-control"
                     placeholder={placeholder}
                     value={value ? value : ''}
-                    onChange={onChange}/>
-                {error && <div className="alert alert-danger">{error}</div>}
+                    onChange={inputOnChange}/>
+                    {error && <div className="alert alert-danger">{error}</div>}
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 TextInput.propTypes = {
     name: React.PropTypes.string.isRequired,

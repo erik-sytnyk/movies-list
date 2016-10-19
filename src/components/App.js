@@ -143,11 +143,10 @@ class App extends Component {
         });
     }
 
-    updateMovieState(event) {
+    updateMovieState(field, value) {
         let movie = this.state.movieToEdit;
 
-        const field = event.target.name;
-        movie[field] = event.target.value;
+        movie[field] = value;
 
         return this.setState({movieToEdit: movie});
     }

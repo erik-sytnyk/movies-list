@@ -1,9 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 
-class TextInput extends React.Component {
+class NumberInput extends React.Component {
     render() {
-        let {error, value, name, label, placeholder} = this.props;
+        let error = this.props.error;
+        let value = this.props.value ? this.props.value : '0';
+        let name = this.props.name;
 
         let wrapperClass = classnames({
             'form-group': true,
@@ -11,19 +13,20 @@ class TextInput extends React.Component {
         });
 
         let inputOnChange = (event) => {
-            this.props.onChange(event.target.name, event.target.value);
+            let value = parseInt(event.target.value, 10);
+            this.props.onChange(event.target.name, value);
         };
 
         return (
             <div className={wrapperClass}>
-                <label htmlFor={name}>{label}</label>
+                <label htmlFor={name}>{this.props.label}</label>
                 <div className="field">
                     <input
-                        type="text"
+                        type="number"
                         name={name}
                         className="form-control"
-                        placeholder={placeholder}
-                        value={value ? value : ''}
+                        min="0"
+                        value={value}
                         onChange={inputOnChange}/>
                     {error && <div className="alert alert-danger">{error}</div>}
                 </div>
@@ -32,13 +35,12 @@ class TextInput extends React.Component {
     }
 }
 
-TextInput.propTypes = {
+NumberInput.propTypes = {
     name: React.PropTypes.string.isRequired,
     label: React.PropTypes.string.isRequired,
     onChange: React.PropTypes.func.isRequired,
-    placeholder: React.PropTypes.string,
-    value: React.PropTypes.string,
+    value: React.PropTypes.number.isRequired,
     error: React.PropTypes.string
 };
 
-export default TextInput;
+export default NumberInput;

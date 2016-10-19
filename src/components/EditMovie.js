@@ -2,8 +2,9 @@ import React from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import TextInput from './common/TextInput';
 import TextAreaInput from './common/TextAreaInput';
-import NumberInput from './common/NumbertInput';
-import Select from 'react-select';
+import NumberInput from './common/NumberInput';
+import SelectInput from './common/SelectInput';
+
 import autoBind from 'react-autobind';
 
 class EditMovie extends React.Component {
@@ -16,21 +17,55 @@ class EditMovie extends React.Component {
         }));
 
         this.state = {
-            genresOptions
+            genresOptions,
+            errors: {}
         };
 
         autoBind(this);
     }
 
-    selectOnChange(val) {
-        let genres = val.map(x => x.value);
-
-        this.props.onChange({
-           target: {
-               name: 'genres',
-               value: genres
-           }
+    componentWillReceiveProps() {
+        this.setState({
+            errors: {}
         });
+    }
+
+    formIsValid() {
+        let errors = {};
+        let fieldIsRequired = 'Field is required.';
+        let movie = this.props.movie;
+
+        if (!movie.title) {
+            errors.title = fieldIsRequired;
+        }
+
+        if (!movie.year) {
+            errors.year = fieldIsRequired;
+        } else if (movie.year < 1900 || movie.year > 2050) {
+            errors.year = 'Invalid year value (should be between 1900 and 2050).'
+        }
+
+        if (!movie.runtime) {
+            errors.runtime = fieldIsRequired;
+        }
+
+        if (!movie.director) {
+            errors.director = fieldIsRequired;
+        }
+
+        if (!movie.actors) {
+            errors.actors = fieldIsRequired;
+        }
+
+        this.setState({errors: errors});
+
+        return Object.keys(errors).length === 0;
+    }
+
+    save() {
+        if (!this.formIsValid()) return;
+
+        this.props.save();
     }
 
     render() {
@@ -55,25 +90,30 @@ class EditMovie extends React.Component {
                             value={this.props.movie.title}
                             onChange={this.props.onChange}
                             placeholder="Title"
+                            error={this.state.errors.title}
                         />
                         <NumberInput
                             name="year"
                             label="Year"
                             value={this.props.movie.year}
                             onChange={this.props.onChange}
+                            error={this.state.errors.year}
                         />
                         <NumberInput
                             name="runtime"
                             label="Runtime"
                             value={this.props.movie.runtime}
                             onChange={this.props.onChange}
+                            error={this.state.errors.runtime}
                         />
-                        <Select
+                        <SelectInput
                             name="genres"
+                            label="Genres"
                             multi={true}
                             options={this.state.genresOptions}
                             value={selectedGenres}
-                            onChange={this.selectOnChange}
+                            onChange={this.props.onChange}
+                            error={this.state.errors.genres}
                         />
                         <TextInput
                             name="director"
@@ -81,6 +121,7 @@ class EditMovie extends React.Component {
                             value={this.props.movie.director}
                             onChange={this.props.onChange}
                             placeholder="Director"
+                            error={this.state.errors.director}
                         />
                         <TextAreaInput
                             name="actors"
@@ -90,6 +131,7 @@ class EditMovie extends React.Component {
                             value={this.props.movie.actors}
                             onChange={this.props.onChange}
                             placeholder="Actors"
+                            error={this.state.errors.actors}
                         />
                         <TextAreaInput
                             name="plot"
@@ -99,10 +141,11 @@ class EditMovie extends React.Component {
                             value={this.props.movie.plot}
                             onChange={this.props.onChange}
                             placeholder="Plot"
+                            error={this.state.errors.plot}
                         />
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button bsStyle="primary" onClick={this.props.save}>Save</Button>
+                        <Button bsStyle="primary" onClick={this.save}>Save</Button>
                         <Button onClick={this.props.close}>Cancel</Button>
                     </Modal.Footer>
                 </Modal>
