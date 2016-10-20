@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import noMovie from '../media/no-movie.png';
 import '../styles/App.css';
-import moviesService from '../movieService';
+import moviesService from '../services/movieServiceStubs';
 import {Button, Glyphicon, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import toastr from 'toastr';
 import Confirm from './common/Confirm';
