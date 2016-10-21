@@ -2,7 +2,9 @@
   "name": "movies-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://yegor-sytnyk.github.io/movies-list",
   "devDependencies": {
+    "gh-pages": "^0.11.0",
     "react-scripts": "0.6.1"
   },
   "dependencies": {
@@ -22,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",

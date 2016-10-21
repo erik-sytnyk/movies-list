@@ -16,5 +16,4 @@ npm-debug.log
 .idea/
 importer/output.json
 importer/db.json
-db.json
 importer/data/
