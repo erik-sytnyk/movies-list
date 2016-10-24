@@ -4,8 +4,7 @@
   "private": true,
   "homepage": "http://yegor-sytnyk.github.io/movies-list",
   "devDependencies": {
-    "gh-pages": "^0.11.0",
-    "react-scripts": "0.6.1"
+    "gh-pages": "^0.11.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -15,6 +14,7 @@
     "react-autobind": "^1.0.6",
     "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
+    "react-scripts": "^0.7.0",
     "react-select": "^1.0.0-rc.2",
     "toastr": "^2.1.2"
   },
