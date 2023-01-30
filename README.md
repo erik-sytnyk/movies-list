@@ -1,3 +1,5 @@
+<!--This application is now obsolete, you can try our updated version at [https://github.com/Orbios/movies_list](https://github.com/Orbios/movies_list).-->
+
 ## Intro
 
 This is sample of Single Page Application for managing movies list.
