@@ -1,4 +1,4 @@
-<!--This application is now obsolete, you can try our updated version at [https://github.com/Orbios/movies_list](https://github.com/Orbios/movies_list).-->
+> This application is now obsolete, you can try our updated version at [https://github.com/Orbios/movies_list](https://github.com/Orbios/movies_list).
 
 ## Intro
 
